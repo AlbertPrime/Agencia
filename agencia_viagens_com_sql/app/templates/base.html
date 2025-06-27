@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Agência de Viagens</title></head>
+<body>
+    <h1>Menu Principal</h1>
+    <a href="{{ url_for('main.clientes') }}">Clientes</a> |
+    <a href="{{ url_for('main.pacotes') }}">Pacotes</a> |
+    <a href="{{ url_for('main.reservas') }}">Reservas</a>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

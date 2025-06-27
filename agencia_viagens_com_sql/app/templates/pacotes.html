@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Pacotes</h2>
+<ul>
+  {% for p in pacotes %}
+    <li>{{ p.destino }} - R$ {{ p.preco }} - {{ p.duracao_dias }} dias</li>
+  {% endfor %}
+</ul>
+{% endblock %}
