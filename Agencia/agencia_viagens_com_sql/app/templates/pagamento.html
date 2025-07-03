@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Agência de Viagens</title>
+    <style>
+        /* Estilo da página */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Imagem de fundo */
+        .background {
+            background-image: url('https://ceabbrasil.com.br/blog/wp-content/uploads/2024/01/01ef6-4039ba_e9d5f6de5b5f4f69953bb99f6c42ebadmv2-1.jpeg'); /* Substitua pelo link da imagem */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed; /* Imagem fixa no fundo */
+            height: 100vh; /* 100% da altura da viewport */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Container de conteúdo */
+        .content {
+            text-align: center;
+            backdrop-filter: blur(5px);
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6); /* Transparência no fundo */
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Título da página */
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilo das informações do pacote */
+        .pacote-info {
+            margin-bottom: 20px;
+        }
+
+        .pacote-info p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .pacote-info span {
+            font-weight: bold;
+        }
+
+        /* Estilo dos campos de pagamento */
+        input[type="text"], input[type="email"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgba(0, 123, 255, 1);
+        }
+
+        /* Estilo dos botões de navegação */
+        .btn {
+            font-size: 1.2em;
+            margin-top: 20px;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgba(0, 123, 255, 1);
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        /* Rodapé */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="content">
+            <h1>Finalize Seu Pagamento</h1>
+            <div class="pacote-info">
+                <h2>Pacote: Viagem para Paris</h2>
+                <p><span>Preço:</span> R$ 3.500,00</p>
+                <p><span>Datas:</span> 10 de Dezembro de 2025 a 20 de Dezembro de 2025</p>
+                <p><span>Inclui:</span> Passagem aérea, hotel 5 estrelas, transporte e passeios turísticos.</p>
+            </div>
+
+            <h2>Escolha Seu Método de Pagamento</h2>
+
+            <!-- Formulário de pagamento -->
+            <form action="/processar-pagamento" method="POST">
+                <input type="text" name="nome" placeholder="Nome no Cartão" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="number" name="numero_cartao" placeholder="Número do Cartão" required>
+                <input type="number" name="cvv" placeholder="CVV" required>
+                <input type="number" name="validade" placeholder="Validade (MM/AA)" required>
+                
+                <label for="metodo_pagamento">Método de Pagamento:</label>
+                <select name="metodo_pagamento" id="metodo_pagamento" required>
+                    <option value="credito">Cartão de Crédito</option>
+                    <option value="debito">Cartão de Débito</option>
+                    <option value="boleto">Boleto Bancário</option>
+                </select>
+
+                <input type="submit" value="Finalizar Pagamento">
+            </form>
+
+            <button class="btn" onclick="window.location.href='index.html'">Voltar para a Página Inicial</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Agência de Viagens - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

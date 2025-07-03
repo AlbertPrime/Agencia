@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacotes de Viagens - Agência</title>
+    <style>
+        /* Resetando margens e paddings */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #007bff;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Seção de Pacotes */
+        .pacotes-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* Caixa de Pacote */
+        .pacote-box {
+            background-color: white;
+            width: 30%;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .pacote-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Imagem do Pacote */
+        .pacote-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Informações do Pacote */
+        .pacote-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .pacote-info h2 {
+            font-size: 1.8em;
+            margin: 10px 0;
+        }
+
+        .pacote-info p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Preço do Pacote */
+        .preco {
+            font-size: 1.5em;
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Botão de mais informações */
+        .btn {
+            font-size: 1em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pacotes de Viagens</h1>
+    </header>
+
+    <section class="pacotes-section">
+        <!-- Pacote 1 -->
+        <div class="pacote-box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSokTbGtHOymh_PyqbDvS4ZjdKFJJCMlttkwQ&s" alt="Pacote Ilhabela">
+            <div class="pacote-info">
+                <h2>Ilhabela - Férias Tropicais</h2>
+                <p>Escapada perfeita para quem ama praias paradisíacas e contato com a natureza. Inclui passeios, trilhas e dias de descanso.</p>
+                <p class="preco">R$ 2.500,00</p>
+                <button class="btn" onclick="window.location.href='ilhabela.html'">Saiba mais</button>
+            </div>
+        </div>
+
+        <!-- Pacote 2 -->
+        <div class="pacote-box">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/b3/3a/7f/casa-mexicana-cancun.jpg?w=500&h=-1&s=1" alt="Pacote Cancún">
+            <div class="pacote-info">
+                <h2>Cancún - Paraíso no Caribe</h2>
+                <p>Curta as praias de águas turquesa e resorts de luxo. Ideal para quem busca relaxamento e diversão à beira-mar.</p>
+                <p class="preco">R$ 4.200,00</p>
+                <button class="btn" onclick="window.location.href='cancun.html'">Saiba mais</button>
+            </div>
+        </div>
+
+        <!-- Pacote 3 -->
+        <div class="pacote-box">
+            <img src="https://aventurasnahistoria.com.br/media/uploads/feedsync/macchu2.jpg" alt="Pacote Machu Picchu">
+            <div class="pacote-info">
+                <h2>Machu Picchu - Aventura Histórica</h2>
+                <p>Uma jornada de aventura e história. Explore as ruínas de Machu Picchu e conheça mais sobre a cultura Inca.</p>
+                <p class="preco">R$ 3.800,00</p>
+                <button class="btn" onclick="window.location.href='machu_picchu.html'">Saiba mais</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Agência de Viagens - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
